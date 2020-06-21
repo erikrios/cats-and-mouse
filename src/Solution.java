@@ -7,7 +7,21 @@ public class Solution {
 
     // Complete the catAndMouse function below.
     static String catAndMouse(int x, int y, int z) {
-        return "";
+
+        String result;
+
+        int catOneDistance = Math.abs((x - z));
+        int catTwoDistance = Math.abs((y - z));
+
+        if (catOneDistance < catTwoDistance) {
+            result = "Cat A";
+        } else if (catOneDistance > catTwoDistance) {
+            result = "Cat B";
+        } else {
+            result = "Mouse C";
+        }
+
+        return result;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
